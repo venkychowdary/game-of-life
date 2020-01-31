@@ -9,11 +9,11 @@ node ('maven') {
     }
 
     stage ('Archiving Artifactory') {
-        archiveArtifacts '/gameoflife-web/target/*.war' 
+        archiveArtifacts 'gameoflife-web/target/*.war' 
     }
 
     stage ('Publishing Junit Test Results') {
-        junit '/gameoflife-web/target/surefire-reports/*.xml'
+        junit 'gameoflife-web/target/surefire-reports/*.xml'
     }
 
     stage ('Build Sucess') {
