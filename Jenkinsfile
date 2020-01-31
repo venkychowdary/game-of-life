@@ -20,4 +20,11 @@ node ('maven') {
         echo 'Venky you done a Good Job'
     }
 
+    stage ('Building Docker image') {
+        sh 'docker image build -t gameoflife:1.0.0 .'
+    }
+
+    stage ()
+        sh 'docker container run -p 81:80 gameoflife:1.0.0'
+
 }
