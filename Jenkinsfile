@@ -1,9 +1,5 @@
 node ('maven') {
 
-    stage ('Allocating Workspace') {
-        ws '/home/maven/workspace/'
-    }
-
     stage ('Git Repository') {
         git 'https://github.com/venkychowdary/game-of-life.git'
     }
