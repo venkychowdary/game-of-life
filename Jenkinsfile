@@ -21,6 +21,8 @@ node ('maven') {
     }
 
     stage ('Building Docker image') {
+        sh 'sudo -i'
+        sh 'sudo service docker start'
         sh 'docker image build -t gameoflife:1.0.0 .'
     }
 
